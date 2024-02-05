@@ -17,6 +17,7 @@ public class CircleEnemeyBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         col = GetComponent<CircleCollider2D>();
+        StartCoroutine(ofa7());
         findDirctionPlayer();
         setSpeed();
     }
@@ -56,6 +57,12 @@ public class CircleEnemeyBehavior : MonoBehaviour
             anim.SetTrigger("HitGround");
         }
 
+    }
+    IEnumerator ofa7()
+    {
+        rb.gravityScale = 0;
+        yield return new WaitForSeconds(0.5f);
+        rb.gravityScale = 1;
     }
 
 }

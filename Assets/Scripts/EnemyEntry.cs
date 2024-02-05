@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyEntry : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class EnemyEntry : MonoBehaviour
     [SerializeField] float distance;
     Transform entryPos;
     [SerializeField] float speed;
+    [SerializeField] UnityEvent start;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -27,22 +29,28 @@ public class EnemyEntry : MonoBehaviour
     }
     void entryMovment()
     {
+        Vector3 distenation;
         if (!down)
         {
             if (dir >= 0)
             {
-                transform.position = Vector2.MoveTowards(transform.position, entryPos.position + Vector3.right * distance, speed * Time.deltaTime);
+
+               distenation= entryPos.position + Vector3.right * distance;
             }
             else
             {
-                transform.position = Vector2.MoveTowards(transform.position, entryPos.position + Vector3.left * distance, speed * Time.deltaTime);
+                distenation = entryPos.position + Vector3.left * distance;
             }
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, entryPos.position + Vector3.down * distance, speed * Time.deltaTime);
+            distenation = entryPos.position + Vector3.down * distance;
         }
-
+        transform.position = Vector3.MoveTowards(transform.position, distenation, speed * Time.deltaTime);
+        if(Vector2.Distance(transform.position, distenation)<0.1f)
+        {
+            start.Invoke();
+        }
     }
     
 }

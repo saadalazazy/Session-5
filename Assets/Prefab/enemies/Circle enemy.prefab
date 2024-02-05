@@ -355,7 +355,6 @@ GameObject:
   - component: {fileID: 4531104758191111669}
   - component: {fileID: 6460577159412195740}
   - component: {fileID: -7937940603273382264}
-  - component: {fileID: -4995989491480398648}
   m_Layer: 6
   m_Name: Circle enemy
   m_TagString: Enemy
@@ -448,7 +447,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8410028887039653955}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7111e2eb89dcaa4585028fa2eb267b2, type: 3}
   m_Name: 
@@ -520,18 +519,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToLive: 15
---- !u!114 &-4995989491480398648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8410028887039653955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c93b2e9e4a8c0418bc369c6dabb6df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  down: 0
-  distance: 5
-  speed: 8
