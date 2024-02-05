@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5438766081756825204}
   - component: {fileID: 91297194543336063}
   - component: {fileID: 352841311038750800}
-  m_Layer: 0
+  - component: {fileID: 5062965426294779816}
+  m_Layer: 12
   m_Name: octagon bullet
   m_TagString: Enemy Bullet
   m_Icon: {fileID: 0}
@@ -194,3 +195,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+--- !u!114 &5062965426294779816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516613238049525568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 1, g: 1, b: 1, a: 1}
+  glowBrightness: 1.6
+  outlineWidth: 1
+  alphaThreshold: 1
+  drawOutside: 0
+  enableInstancing: 0
