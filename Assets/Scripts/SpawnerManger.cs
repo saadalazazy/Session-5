@@ -37,30 +37,33 @@ public class SpawnerManger : MonoBehaviour
     IEnumerator nextWaveSpawn(int index)
     {
         currentWave = waves[index];
-        for(int i = 0; i < currentWave.getCount(); i++)
+        int randomIndex;
+        for (int i = 0; i < currentWave.getCount(); i++)
         {
             if (currentWave.Enemies[i].GetComponent<StarBehavior>() != null)
             {
-                Instantiate(currentWave.Enemies[i], spawnerPoits[Random.Range(0, 2)].position, Quaternion.identity);
+                randomIndex = Random.Range(0, 2);
+                Instantiate(currentWave.Enemies[i], spawnerPoits[randomIndex].position, Quaternion.identity);
             }
             else if(currentWave.Enemies[i].GetComponent<CircleEnemeyBehavior>() != null)
             {
-                Instantiate(currentWave.Enemies[i], spawnerPoits[Random.Range(2, 4)].position, Quaternion.identity);
+                randomIndex = Random.Range(2, 4);
+                Instantiate(currentWave.Enemies[i], spawnerPoits[randomIndex].position, Quaternion.identity);
             }
             else if(currentWave.Enemies[i].GetComponent<traingleEnemyBehavior>() != null)
             {
-                Instantiate(currentWave.Enemies[i], spawnerPoits[Random.Range(4, 6)].position, Quaternion.identity);
+                randomIndex = Random.Range(4, 6);
+                Instantiate(currentWave.Enemies[i], spawnerPoits[randomIndex].position, Quaternion.identity);
             }
             else
             {
-                Instantiate(currentWave.Enemies[i], spawnerPoits[Random.Range(6, 8)].position, Quaternion.identity);
+                randomIndex = Random.Range(6, 8);
+                Instantiate(currentWave.Enemies[i], spawnerPoits[randomIndex].position, Quaternion.identity);
             }
-            Debug.Log(i);
-            Debug.Log(currentWave.getCount() - 1);
+            spawnerPoits[randomIndex].GetComponent<Animator>().SetTrigger("shoot");
             if (i == currentWave.getCount()-1)
             {
                 waveFinished = true;
-                Debug.Log(waveFinished);
                 yield break;
             }
 

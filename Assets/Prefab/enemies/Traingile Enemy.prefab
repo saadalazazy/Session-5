@@ -134,6 +134,7 @@ MonoBehaviour:
   bulletSpeed: 20
   shootDelay: 1.5
   shootPos: {fileID: 1479833617366442859}
+  speedEntry: 20
 --- !u!114 &4696055109688474746
 MonoBehaviour:
   m_ObjectHideFlags: 0

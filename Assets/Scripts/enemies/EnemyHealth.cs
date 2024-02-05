@@ -29,15 +29,18 @@ public class EnemyHealth : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            if (rb != null)
-            {
-                rb.bodyType = RigidbodyType2D.Static;
-            }
             anim.SetTrigger("isDeath");
         }
     }
     void destroyGameObject()
     {
         Destroy(gameObject);
+    }
+    void makeStaticBody()
+    {
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+        }
     }
 }

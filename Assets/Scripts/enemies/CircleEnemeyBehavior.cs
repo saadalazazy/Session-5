@@ -32,7 +32,14 @@ public class CircleEnemeyBehavior : MonoBehaviour
     }
     void setSpeed()
     {
-        rb.velocity = dir.normalized * speed;
+        if(dir.x >= 0)
+        {
+            rb.velocity = Vector2.right * speed;
+        }
+        else
+        {
+            rb.velocity = Vector2.left * speed;
+        }
     }
 
     private void HandleAnimation()
@@ -50,4 +57,5 @@ public class CircleEnemeyBehavior : MonoBehaviour
         }
 
     }
+
 }

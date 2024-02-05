@@ -53,3 +53,6 @@ TagManager:
   - name: enemy
     uniqueID: 1831034065
     locked: 0
+  - name: cannon
+    uniqueID: 1794264461
+    locked: 0

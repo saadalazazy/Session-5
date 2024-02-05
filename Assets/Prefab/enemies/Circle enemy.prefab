@@ -354,6 +354,8 @@ GameObject:
   - component: {fileID: 1047737403547206875}
   - component: {fileID: 4531104758191111669}
   - component: {fileID: 6460577159412195740}
+  - component: {fileID: -7937940603273382264}
+  - component: {fileID: -4995989491480398648}
   m_Layer: 6
   m_Name: Circle enemy
   m_TagString: Enemy
@@ -411,7 +413,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.59
 --- !u!50 &5884005715760800953
 Rigidbody2D:
   serializedVersion: 4
@@ -446,7 +448,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8410028887039653955}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7111e2eb89dcaa4585028fa2eb267b2, type: 3}
   m_Name: 
@@ -505,3 +507,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7937940603273382264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410028887039653955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e5e6734fb73974d954c2911e55b05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToLive: 15
+--- !u!114 &-4995989491480398648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410028887039653955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c93b2e9e4a8c0418bc369c6dabb6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  down: 0
+  distance: 5
+  speed: 8

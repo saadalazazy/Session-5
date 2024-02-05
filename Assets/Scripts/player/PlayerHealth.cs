@@ -6,16 +6,21 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] float maxHealth;
     float playerHealth;
-
+    Animator anim;
+    Rigidbody2D rb;
+    bool isDie;
     private void Start()
     {
         playerHealth = maxHealth;
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy Bullet")
         {
             DamagePlayer(collision.gameObject.GetComponent<Damage>().getDamage());
+            CameraShake.instance.setCameraShake(5, 0.5f);
             Destroy(collision.gameObject);
         }
 
@@ -25,16 +30,23 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             DamagePlayer(collision.gameObject.GetComponent<Damage>().getDamage());
+            CameraShake.instance.setCameraShake(5, 0.5f);
             Destroy(collision.gameObject);
         }
     }
     private void DamagePlayer(float damage)
     {
         playerHealth -= damage;
-        if (playerHealth < 0)
+        if (playerHealth <= 0 && !isDie)
         {
+            isDie = true;
             playerHealth = 0;
-            Debug.Log("isDead");
+            if (rb != null)
+            {
+                rb.bodyType = RigidbodyType2D.Kinematic;
+            }
+            anim.SetLayerWeight(1, 0);
+            anim.SetTrigger("die");
         }
     }
 }

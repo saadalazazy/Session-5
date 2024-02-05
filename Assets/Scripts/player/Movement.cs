@@ -58,7 +58,7 @@ public class Movement : MonoBehaviour
     }
     private void AnimationHAndler()
     {
-        if (rb.velocity.x != 0)
+        if (Mathf.Abs(rb.velocity.x) > 0.1f)
         {
             anim.SetBool("run",true);
         }

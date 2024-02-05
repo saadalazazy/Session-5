@@ -53,7 +53,7 @@ public class Shooting : MonoBehaviour
         else
         {
             Flip(true);
-            if (rb.velocity.x >= 0)
+            if (rb.velocity.x > 0)
             {
                 anim.SetBool("reverse", true);
             }
@@ -82,7 +82,7 @@ public class Shooting : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, gunBarrel.transform.position, shoulder.transform.rotation);
             dir.Normalize();
             bullet.GetComponent<Rigidbody2D>().velocity = dir * bulletSpeed;
-            CameraShake.instance.setCameraShake(2, 0.1f);
+            CameraShake.instance.setCameraShake(4, 0.02f);
             StartCoroutine("delayShooting");
         }
     }

@@ -16,6 +16,6 @@ MonoBehaviour:
   - {fileID: 8410028887039653955, guid: 98d6db48b32b0a343bc5e57806b8c2b9, type: 3}
   - {fileID: 8410028887039653955, guid: 98d6db48b32b0a343bc5e57806b8c2b9, type: 3}
   - {fileID: 8410028887039653955, guid: 98d6db48b32b0a343bc5e57806b8c2b9, type: 3}
-  - {fileID: 2863978149400684201, guid: 5c7935ccc6206854bbe2139bd45e51c0, type: 3}
-  - {fileID: 2863978149400684201, guid: 5c7935ccc6206854bbe2139bd45e51c0, type: 3}
+  - {fileID: 8410028887039653955, guid: 98d6db48b32b0a343bc5e57806b8c2b9, type: 3}
+  - {fileID: 8410028887039653955, guid: 98d6db48b32b0a343bc5e57806b8c2b9, type: 3}
   timeBetweenEnemies: 2
