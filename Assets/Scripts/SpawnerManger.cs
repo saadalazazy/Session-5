@@ -10,7 +10,7 @@ public class SpawnerManger : MonoBehaviour
     int currentWaveindex = 0;
     WaveData currentWave;
     bool waveFinished = false;
-
+    [SerializeField] GameObject cannonShootEffect;
     private void Start()
     {
         StartCoroutine(WaveDelay(currentWaveindex));
@@ -61,6 +61,7 @@ public class SpawnerManger : MonoBehaviour
                 Instantiate(currentWave.Enemies[i], spawnerPoits[randomIndex].position, Quaternion.identity);
             }
             spawnerPoits[randomIndex].GetComponent<Animator>().SetTrigger("shoot");
+            GameObject shootEffect = Instantiate(cannonShootEffect, spawnerPoits[randomIndex].position + new Vector3(-spawnerPoits[randomIndex].localScale.x * 2 ,0,0),Quaternion.identity);
             if (i == currentWave.getCount()-1)
             {
                 waveFinished = true;

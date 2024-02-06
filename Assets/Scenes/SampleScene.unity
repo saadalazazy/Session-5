@@ -1409,6 +1409,7 @@ MonoBehaviour:
   - {fileID: 1311879168}
   - {fileID: 1671999887}
   - {fileID: 1196130092}
+  cannonShootEffect: {fileID: 3167220036517594578, guid: b1abc83e73e717448a6d3199922d554d, type: 3}
 --- !u!1 &887948765
 GameObject:
   m_ObjectHideFlags: 0
