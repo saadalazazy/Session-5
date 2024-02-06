@@ -2,27 +2,24 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Timeline;
 
 public class CameraShake : MonoBehaviour
 {
     CinemachineVirtualCamera cam;
-    public static CameraShake instance;
-
-    private void Awake()
+    public static CameraShake instants;
+    private void Start()
     {
-        instance = this;
+        instants = this;
         cam = GetComponent<CinemachineVirtualCamera>();
     }
-
-    public void setCameraShake(float intensity , float time)
+    public void ShakeCamera(float amplitude ,float duration)
     {
-        StartCoroutine(durationCamreaShake(intensity , time));
+        StartCoroutine(shakeCoroutine(amplitude , duration));
     }
-    IEnumerator durationCamreaShake(float intensity , float time)
+    IEnumerator shakeCoroutine(float amplitude, float duration)
     {
-        cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = intensity;
-        yield return new WaitForSeconds(time);
+        cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = amplitude;
+        yield return new WaitForSeconds(duration);
         cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
     }
 }

@@ -82,7 +82,7 @@ public class Shooting : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, gunBarrel.transform.position, shoulder.transform.rotation);
             dir.Normalize();
             bullet.GetComponent<Rigidbody2D>().velocity = dir * bulletSpeed;
-            CameraShake.instance.setCameraShake(2, 0.1f);
+            CameraShake.instants.ShakeCamera(2, 0.05f);
             StartCoroutine("delayShooting");
         }
     }
