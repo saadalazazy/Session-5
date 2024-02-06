@@ -44,13 +44,11 @@ public class PlayerHealth : MonoBehaviour
         {
             isDie = true;
             playerHealth = 0;
-            if (rb != null)
-            {
-                rb.bodyType = RigidbodyType2D.Kinematic;
-                rb.velocity = Vector3.zero;
-            }
             anim.SetLayerWeight(1, 0);
             anim.SetTrigger("die");
+            rb.velocity = Vector3.zero;
+            
+            
         }
     }
 }
