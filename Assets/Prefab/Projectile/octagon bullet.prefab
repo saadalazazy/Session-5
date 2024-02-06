@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 5849675784271648350}
   - component: {fileID: 537727713848182679}
   - component: {fileID: 4681224757668976945}
-  - component: {fileID: 5438766081756825204}
   - component: {fileID: 91297194543336063}
-  - component: {fileID: 352841311038750800}
   - component: {fileID: 5062965426294779816}
-  m_Layer: 12
+  - component: {fileID: -1596337355966355580}
+  - component: {fileID: 1554980926643678973}
+  m_Layer: 13
   m_Name: octagon bullet
   m_TagString: Enemy Bullet
   m_Icon: {fileID: 0}
@@ -117,19 +117,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &5438766081756825204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7516613238049525568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e5e6734fb73974d954c2911e55b05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToLive: 5
 --- !u!212 &91297194543336063
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -182,19 +169,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &352841311038750800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7516613238049525568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff788f11e35026a48a8e300f9259cd07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
 --- !u!114 &5062965426294779816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,3 +187,30 @@ MonoBehaviour:
   alphaThreshold: 1
   drawOutside: 0
   enableInstancing: 0
+--- !u!114 &-1596337355966355580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516613238049525568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153b20fb42f2aaf45bce08a038590508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 10
+  hitBulletEffect: {fileID: 2335431687661353543, guid: 604a4925061e52b478afef72551e185c, type: 3}
+--- !u!114 &1554980926643678973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516613238049525568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff788f11e35026a48a8e300f9259cd07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5

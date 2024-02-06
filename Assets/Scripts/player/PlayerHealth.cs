@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     Animator anim;
     Rigidbody2D rb;
     bool isDie;
+    [SerializeField] Slider healthBar;
     private void Start()
     {
         playerHealth = maxHealth;
@@ -37,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
     private void DamagePlayer(float damage)
     {
         playerHealth -= damage;
+        healthBar.value = playerHealth / maxHealth;
         if (playerHealth <= 0 && !isDie)
         {
             isDie = true;
@@ -44,6 +47,7 @@ public class PlayerHealth : MonoBehaviour
             if (rb != null)
             {
                 rb.bodyType = RigidbodyType2D.Kinematic;
+                rb.velocity = Vector3.zero;
             }
             anim.SetLayerWeight(1, 0);
             anim.SetTrigger("die");

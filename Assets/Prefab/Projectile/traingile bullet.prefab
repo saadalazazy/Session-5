@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3525366903413030587}
   - component: {fileID: 835010098744241088}
   - component: {fileID: 3150296865716073823}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: triangle left eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,9 +114,9 @@ GameObject:
   - component: {fileID: 5849675784271648350}
   - component: {fileID: 537727713848182679}
   - component: {fileID: 4681224757668976945}
-  - component: {fileID: 5438766081756825204}
   - component: {fileID: 723895869536600839}
-  m_Layer: 12
+  - component: {fileID: -3351907510137894870}
+  m_Layer: 13
   m_Name: traingile bullet
   m_TagString: Enemy Bullet
   m_Icon: {fileID: 0}
@@ -214,19 +214,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &5438766081756825204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7516613238049525568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e5e6734fb73974d954c2911e55b05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToLive: 5
 --- !u!114 &723895869536600839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,3 +227,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 15
+--- !u!114 &-3351907510137894870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516613238049525568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad291972d2021745b49919ca99e2dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 5
+  hitBulletEffect: {fileID: 2335431687661353543, guid: 604a4925061e52b478afef72551e185c, type: 3}
+  instantiatBulletEffect: {fileID: 5277042040636004291, guid: bb490351fab777b4db9f465e98211b95, type: 3}

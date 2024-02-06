@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3279179254286262761}
   - component: {fileID: 4696055109688474746}
   - component: {fileID: -6436181226197610668}
+  - component: {fileID: 890408588829404246}
   m_Layer: 7
   m_Name: Traingile Enemy
   m_TagString: Untagged
@@ -134,7 +135,6 @@ MonoBehaviour:
   bulletSpeed: 20
   shootDelay: 1.5
   shootPos: {fileID: 1479833617366442859}
-  speedEntry: 20
 --- !u!114 &4696055109688474746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +169,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &890408588829404246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265039337473973102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c93b2e9e4a8c0418bc369c6dabb6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entryFinished: 0
+  distance: {x: 5, y: 6}
+  speed: 5
 --- !u!1 &2461187259565831664
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,12 +12,15 @@ public class OctalBehavior : MonoBehaviour
     [SerializeField] float timeDelay;
     [SerializeField] float speed;
     Animator anim;
+    EnemyEntry enemyEntry;
     private void Start()
     {
         anim = GetComponent<Animator>();
+        enemyEntry = GetComponent<EnemyEntry>();
     }
     private void Update()
     {
+        if (!enemyEntry.entryFinished) return;
         handelShooting();
     }
 

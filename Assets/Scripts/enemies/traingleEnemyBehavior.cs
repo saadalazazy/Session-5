@@ -16,18 +16,21 @@ public class traingleEnemyBehavior : MonoBehaviour
     [SerializeField] Transform shootPos;
     Vector2 offset;
     Animator anim;
+    EnemyEntry enemyEntry;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         offset = new Vector2(Random.Range(-3, 3), Random.Range(5, 10));
         anim = GetComponent<Animator>();
+        enemyEntry = GetComponent<EnemyEntry>();
     }
 
     private void Update()
     {
-        moveToPlayer();
         handleAming();
+        if (!enemyEntry.entryFinished) return;
         handleShooting();
+        moveToPlayer();
     }
     void handleAming()
     {

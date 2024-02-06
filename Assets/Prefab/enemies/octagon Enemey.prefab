@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 6268736276887107295}
   - component: {fileID: 8901989664697202170}
   - component: {fileID: 1856222739951717147}
+  - component: {fileID: -489656040869150471}
   m_Layer: 8
   m_Name: octagon Enemey
   m_TagString: Enemy
@@ -458,6 +459,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxhealth: 120
+--- !u!114 &-489656040869150471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6204939704641160978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c93b2e9e4a8c0418bc369c6dabb6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entryFinished: 0
+  distance: {x: 10, y: 30}
+  speed: 10
 --- !u!1 &8090219851844711456
 GameObject:
   m_ObjectHideFlags: 0
